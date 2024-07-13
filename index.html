@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <title>My Portfolio
-
-       </title>
+       <title>My Portfolio</title>
         <style>
             body{
-                background-color:rgb(24, 23, 23);
+                background-color:rgb(23, 23, 30);
                 font-family:sans-serif;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
             }
             nav{
                 display:flex;
                 justify-content:space-between;
                 border-bottom-width: 1px;
-                border-bottom-style: dashed;
+                border-bottom-style: double;
                 border-bottom-color: white;
                 border-top-width: 1px;
-                border-top-style: dashed;
+                border-top-style: double;
                 border-top-color: white;
             }
             ul{
@@ -24,8 +26,9 @@
                 display:flex;
                 color:white;
                 align-items:center;
-                justify-content:space-between;
+                justify-content:stretch;
                 list-style:none;
+                padding: 0;
             }
             .menu{
                 display:flex;
@@ -37,12 +40,50 @@
 
             .menu li a{
                 font-size:18px;
+                color: white;
+                text-decoration: none;
             }
             img{
                 width:90px;
                 height:90px;
                 object-fit: cover;
                 border-radius:45px;
+                margin-right:0px;
+
+            }
+            .intro-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+                background-color:rgb(23, 23, 30);
+            }
+            .intro{
+                color:white;
+                text-align: center;
+                font-size:50px;
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .15em solid rgb(244, 243, 241); /* The typewriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                letter-spacing: .1em; /* Adjust as needed */
+                animation: 
+                    typing 3.5s steps(40, end),
+                    blink-caret .75s step-end infinite;
+            }
+            .sub{
+                
+            }
+
+            /* The typing effect */
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: rgb(245, 244, 241); }
             }
         </style>
     </head>
@@ -52,14 +93,19 @@
                 <ul>
                     <li><img src="Myphoto.png"></li>
                     <span class="menu">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Projects</a></li>
-                    <li><a>Contacts</a></li>
-                </span>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </span>
                 </ul>
             </nav>
         </header>
-        
+        <section class="intro-container">
+            <div class="intro">
+                Hi this is Jahnavi Saxena
+            </div>
+           
+        </section>
     </body>
 </html>
