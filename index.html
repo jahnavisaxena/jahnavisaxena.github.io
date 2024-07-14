@@ -10,17 +10,23 @@
                 font-family:Nunito;
             }
             body{
-                background-color:rgb(23, 23, 30);
+                background-image: linear-gradient(to right, #d3cce3, #e9e4f0); 
                 font-family:sans-serif;
                 margin: 0;
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
+
             }
             .header{
             padding: 1rem 35px;
             width:auto;
             background:#fff;
+            box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+            position:fixed;
+            z-index:1000;
+            right:0;
+            left:0;
             }
             .header-content{
                 display:flex;
@@ -36,12 +42,18 @@
                 width:4.5rem;
                 height:4.5rem;
                 margin-right:1.2rem;
+                cursor:pointer;
             }
             .header-name{
                 font-size:18px;
                 text-transform:uppercase;
                 font-weight:bold;
                 letter-spacing:1px;
+                cursor:pointer;
+                transition: color 0.13s;
+            }
+            .header-name:hover{
+                color:rgb(244, 159, 11);
             }
             .photo{
                 width:100%;
@@ -66,10 +78,87 @@
                 cursor:pointer;
             }
             .header-link:hover{
-                color:rgb(11, 244, 46);
+                color:rgb(244, 159, 11);
             }
-           
+            .header-link:active{
+                opacity:0.4;
+            }
+            .home-page{
+               
+            }
             
+           .home-content{
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:92%;
+            transform:translate(-50%,-50%);
+            max-width:92rem;
+            text-align:center;
+            
+           }
+           .heading-primary{
+            font-size:3rem;
+            text-transform:uppercase;
+            letter-spacing:3px;
+            text-align:center;
+            color:#111;;
+            font-weight:900;
+           }
+           .home-info{
+            margin: 3rem auto 0 auto;
+            max-width: 80rem;
+           }
+           .text-primary{
+            color: #333;
+            font-size: 1.4rem;
+            text-align: center;
+            width: 100%;
+            line-height: 1.6;
+           }
+           .Explore-down{
+            width:100%;
+            margin-top:20px;
+           }
+           .explore-button{
+            padding: 12px 24px;
+            background-color:rgb(233, 150, 7);
+           border:none;
+            border-radius:11px;
+            font-size:18px;
+            cursor:pointer;
+            margin-top:25px;
+            
+           }
+           .explore-button:hover{
+            text-decoration:underline;
+           }
+           .main-container{
+            max-width: 120rem;
+            margin: auto;
+            width: 92%;
+           }
+            .heading-sec-main{
+                display: block;
+                font-size: 4rem;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-align: center;
+                margin-bottom: 3.5rem;
+                position: relative;
+                color: #111;
+            }
+            .headin-sec-main::after{
+                content: '';
+                position: absolute;
+                top: calc(100% + 1.5rem);
+                height: 5px;
+                width: 3rem;
+                background: #e3af05;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 5px;
+            }
         </style>
     </head>
     <body>
@@ -107,7 +196,25 @@
             </div>
             
         </header>
-       
+       <section >
+        <div class="home-page">
+            <div class="home-content">
+                <h1 class="heading-primary">Hey, I am Jahnavi Saxena</h1>
+                <div class="home-info">
+                    <p class="text-primary">I am front end developer buliding my case in DSA aur prem ratan 
+                        dhan paayo laaga rang jo tera hui mein kamaal ki payo re payo re payo reeee prem ratan
+                    </p>
+                </div>
+                <div class="Explore-down">
+                    <button class="explore-button">Explore More  &#8595;</button>
+                </div>
+              </div>
+        </div>
+          
+
+       </section>
+
+      
         
     </body>
 </html>
