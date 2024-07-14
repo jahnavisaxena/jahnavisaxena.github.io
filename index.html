@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
        <title>My Portfolio</title>
         <style>
+            *{
+                font-family:Nunito;
+            }
             body{
                 background-color:rgb(23, 23, 30);
                 font-family:sans-serif;
@@ -11,101 +17,97 @@
                 display: flex;
                 flex-direction: column;
             }
-            nav{
-                display:flex;
-                justify-content:space-between;
-                border-bottom-width: 1px;
-                border-bottom-style: double;
-                border-bottom-color: white;
-                border-top-width: 1px;
-                border-top-style: double;
-                border-top-color: white;
+            .header{
+            padding: 1rem 35px;
+            width:auto;
+            background:#fff;
             }
-            ul{
-                width:100%;
+            .header-content{
                 display:flex;
-                color:white;
                 align-items:center;
-                justify-content:stretch;
-                list-style:none;
-                padding: 0;
+                justify-content:space-between;
             }
-            .menu{
+            .header-logo{
+                display:flex;
+                align-items:center;
+
+            }
+            .header-photo{
+                width:4.5rem;
+                height:4.5rem;
+                margin-right:1.2rem;
+            }
+            .header-name{
+                font-size:18px;
+                text-transform:uppercase;
+                font-weight:bold;
+                letter-spacing:1px;
+            }
+            .photo{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                object-position:center;
+                border-radius:50%;
+            }
+            .header-links{
                 display:flex;
             }
-            .menu li{
-                padding-left:30px;
-                padding-right:8px;
+            li{
+                list-style:none;
             }
-
-            .menu li a{
-                font-size:18px;
-                color: white;
-                text-decoration: none;
+            .header-link{
+                padding:2.2rem 2rem;
+                font-size:17px;
+                text-transform:uppercase;
+                font-weight:700;
+                letter-spacing:1px;
+                transition:color 0.13s;
+                cursor:pointer;
             }
-            img{
-                width:90px;
-                height:90px;
-                object-fit: cover;
-                border-radius:45px;
-                margin-right:0px;
-
+            .header-link:hover{
+                color:rgb(11, 244, 46);
             }
-            .intro-container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-grow: 1;
-                background-color:rgb(23, 23, 30);
-            }
-            .intro{
-                color:white;
-                text-align: center;
-                font-size:50px;
-                overflow: hidden; /* Ensures the content is not revealed until the animation */
-                border-right: .15em solid rgb(244, 243, 241); /* The typewriter cursor */
-                white-space: nowrap; /* Keeps the content on a single line */
-                letter-spacing: .1em; /* Adjust as needed */
-                animation: 
-                    typing 3.5s steps(40, end),
-                    blink-caret .75s step-end infinite;
-            }
-            .sub{
-                
-            }
-
-            /* The typing effect */
-            @keyframes typing {
-                from { width: 0 }
-                to { width: 100% }
-            }
-
-            /* The typewriter cursor effect */
-            @keyframes blink-caret {
-                from, to { border-color: transparent }
-                50% { border-color: rgb(245, 244, 241); }
-            }
+           
+            
         </style>
     </head>
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><img src="Myphoto.png"></li>
-                    <span class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </span>
-                </ul>
-            </nav>
-        </header>
-        <section class="intro-container">
-            <div class="intro">
-                Hi this is Jahnavi Saxena
+            <div class="header">
+                <div class="header-content">
+                    <div class="header-logo">
+                        <div class="header-photo">
+                            <img class="photo" src="Myphoto.png" alt="myphoto">
+                        </div>
+                        <div>
+                            <span class="header-name">Jahnavi Saxena</span>
+                        </div>
+                    </div>
+
+                    <div class="header-main">
+                        <ul class="header-links">
+                            <li class="header-link_wrapper">
+                                <a class="header-link">Home</a>
+                            </li>
+                            <li class="header-link_wrapper">
+                                <a class="header-link">About</a>
+                            </li>
+                            <li class="header-link_wrapper">
+                                <a class="header-link">Projects</a>
+                            </li>
+                            <li class="header-link_wrapper">
+                                <a class="header-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
             </div>
-           
-        </section>
+            
+        </header>
+       
+        
     </body>
 </html>
