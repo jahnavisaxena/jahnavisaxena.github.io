@@ -5,161 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
        <title>My Portfolio</title>
-        <style>
-            *{
-                font-family:Nunito;
-            }
-            body{
-                background-image: linear-gradient(to right, #d3cce3, #e9e4f0); 
-                font-family:sans-serif;
-                margin: 0;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-
-            }
-            .header{
-            padding: 1rem 35px;
-            width:auto;
-            background:#fff;
-            box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
-            position:fixed;
-            z-index:1000;
-            right:0;
-            left:0;
-            }
-            .header-content{
-                display:flex;
-                align-items:center;
-                justify-content:space-between;
-            }
-            .header-logo{
-                display:flex;
-                align-items:center;
-
-            }
-            .header-photo{
-                width:4.5rem;
-                height:4.5rem;
-                margin-right:1.2rem;
-                cursor:pointer;
-            }
-            .header-name{
-                font-size:18px;
-                text-transform:uppercase;
-                font-weight:bold;
-                letter-spacing:1px;
-                cursor:pointer;
-                transition: color 0.13s;
-            }
-            .header-name:hover{
-                color:rgb(244, 159, 11);
-            }
-            .photo{
-                width:100%;
-                height:100%;
-                object-fit:cover;
-                object-position:center;
-                border-radius:50%;
-            }
-            .header-links{
-                display:flex;
-            }
-            li{
-                list-style:none;
-            }
-            .header-link{
-                padding:2.2rem 2rem;
-                font-size:17px;
-                text-transform:uppercase;
-                font-weight:700;
-                letter-spacing:1px;
-                transition:color 0.13s;
-                cursor:pointer;
-            }
-            .header-link:hover{
-                color:rgb(244, 159, 11);
-            }
-            .header-link:active{
-                opacity:0.4;
-            }
-            .home-page{
-               
-            }
-            
-           .home-content{
-            position:absolute;
-            top:50%;
-            left:50%;
-            width:92%;
-            transform:translate(-50%,-50%);
-            max-width:92rem;
-            text-align:center;
-            
-           }
-           .heading-primary{
-            font-size:3rem;
-            text-transform:uppercase;
-            letter-spacing:3px;
-            text-align:center;
-            color:#111;;
-            font-weight:900;
-           }
-           .home-info{
-            margin: 3rem auto 0 auto;
-            max-width: 80rem;
-           }
-           .text-primary{
-            color: #333;
-            font-size: 1.4rem;
-            text-align: center;
-            width: 100%;
-            line-height: 1.6;
-           }
-           .Explore-down{
-            width:100%;
-            margin-top:20px;
-           }
-           .explore-button{
-            padding: 12px 24px;
-            background-color:rgb(233, 150, 7);
-           border:none;
-            border-radius:11px;
-            font-size:18px;
-            cursor:pointer;
-            margin-top:25px;
-            
-           }
-           .explore-button:hover{
-            text-decoration:underline;
-           }
-           .main-container{
-            max-width: 120rem;
-            margin: auto;
-            width: 92%;
-           }
-            .heading-sec-main{
-                display: block;
-                font-size: 4rem;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                text-align: center;
-                margin-bottom: 3.5rem;
-                position: relative;
-                color: #111;
-            }
-            .headin-sec-main::after{
-                content: '';
-                position: absolute;
-                top: calc(100% + 1.5rem);
-                height: 5px;
-                width: 3rem;
-                background: #e3af05;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 5px;
-            }
-        </style>
+    <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
@@ -196,7 +42,8 @@
             </div>
             
         </header>
-       <section >
+
+       <section id="home-hero" class="home-hero">
         <div class="home-page">
             <div class="home-content">
                 <h1 class="heading-primary">Hey, I am Jahnavi Saxena</h1>
@@ -211,8 +58,57 @@
               </div>
         </div>
           
+        
 
        </section>
+
+       <section id="about" class="sec-pad">
+            <div class="main-container">
+                <h2 class="heading">
+                    <span class="heading-main">About Me</span>
+                    <span class="heading-sub">Here you will find more information
+                         about me, what I do, and my current skills
+                         mostly in terms of programming and technology</span>
+                </h2>
+                <div class="about-content">
+                    <div class="about-main">
+                        <h3 class="about-content-title">Get to know me!</h3>
+                        <div class="about-content-details">
+                            <p class="about-content-para">
+                                I'm a <strong>Frontend Focused Web Developer</strong> building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. 
+                                Check out some of my work in the Projects section.
+                            </p>
+                            <p class="about-content-para">
+                                I also like sharing content related to the stuff that I have 
+                                learned over the years in <strong>Web Development </strong>so it can help other people of
+                                 the Dev Community. Feel free to Connect or Follow me on my 
+                                 Linkedin and Instagram where I post useful content related to 
+                                 Web Development and Programming
+                            </p>
+                            
+                       </div>
+
+                    </div>
+                    <div class="about-skills">
+                        <h3 class="about-content-title">My Skills</h3>
+                        <div class="skills">
+                            <div class="skill">HTML</div>
+                            <div class="skill">CSS</div>
+                            <div class="skill">JavaScript</div>
+                            <div class="skill">C</div>
+                            <div class="skill">Java</div>
+                            <div class="skill">Shell</div>
+                            <div class="skill">Python</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+
+       
 
       
         
