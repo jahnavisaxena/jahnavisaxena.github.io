@@ -84,7 +84,7 @@ li{
     min-width: 40rem;
     padding-top:50rem;
     padding-bottom:0;
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    background-image: linear-gradient(to right, #d3cce3, #e9e4f0); 
 }
 
 .home-content{
@@ -164,7 +164,7 @@ width: 92%;
 }
 .sec-pad{
     padding: 1rem 0;
-    background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); 
 }
 .main-container{
     max-width:120rem;
@@ -289,4 +289,13 @@ width: 92%;
 }
 .button-to-link:hover{
     padding: 1.2rem 4rem;
+}
+.contact-sec{
+    margin-bottom:12rem;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.contact-list{
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom:5rem;
 }
