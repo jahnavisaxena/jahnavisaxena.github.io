@@ -2,8 +2,11 @@
     font-family:Nunito;
     box-sizing:border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    background-color:rgb(234, 226, 226);
+    background-color:rgb(255, 255, 255);
     font-family:sans-serif;
     margin: 0;
     height: 100vh;
@@ -86,7 +89,7 @@ li{
     min-width: 40rem;
     padding-top:50rem;
     padding-bottom:0;
-    background-image: linear-gradient(to right, #d3cce3, #e9e4f0); 
+    background-color:#fff;
 }
 
 .home-content{
@@ -120,7 +123,7 @@ line-height: 1.6;
 }
 .Explore-down{
 width:100%;
-margin-top:2rem;
+margin-top:6rem;
 }
 .button-mail{
     padding: 1rem 4rem;
@@ -133,7 +136,7 @@ margin-top:2rem;
     font-weight: 700;
     text-decoration:none;
     border-radius: 5px;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
     cursor:pointer;
     scroll-behavior:smooth;
 
@@ -307,3 +310,4 @@ width: 92%;
     justify-content:space-evenly;
     margin-bottom:5rem;
 }
+
