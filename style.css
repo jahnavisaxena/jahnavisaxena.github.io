@@ -83,12 +83,14 @@ li{
 }
 .home-hero{
     color: #fff;
-    background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(../../assets/svg/common-bg.svg);
+    background-image:url('Images/bg-3.jpg');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
     background-position: center;
     background-position-x: center;
     background-position-y: center;
     height: 100vh;
-    min-height: 55rem;
+    min-height: 50rem;
     max-height: 120rem;
     position: relative;
  
@@ -144,10 +146,14 @@ margin-top:6rem;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
     cursor:pointer;
     scroll-behavior:smooth;
+    transition:padding 0.3s;
 
 }
 .button-mail:hover{
-
+  padding: 1.1rem 6rem;
+}
+.button-mail:active{
+    opacity:0.4;
 }
 .main-container{
 max-width: 120rem;
@@ -316,7 +322,3 @@ width: 92%;
     margin-bottom:5rem;
 }
 
-
-
-
-    
