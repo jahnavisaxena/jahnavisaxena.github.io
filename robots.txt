@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jahnavisaxena.github.io/playground-macos/sitemap.xml

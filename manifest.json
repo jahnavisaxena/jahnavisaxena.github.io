@@ -1,0 +1,26 @@
+{
+  "short_name": "Jahnavi's Portfolio",
+  "name": "Jahnavi Saxena's Portfolio",
+  "description": "Jahnavi Saxena's professional portfolio simulating a macOS desktop interface, showcasing expertise in Cybersecurity, Cloud Security, GRC, SOC engineering, and Agentic AI.",
+  "icons": [
+    {
+      "src": "logo/favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
