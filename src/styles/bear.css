@@ -111,7 +111,7 @@
 }
 
 .bear .markdown img {
-  @apply inline-block;
+  @apply inline-block max-w-full h-auto rounded-lg shadow-sm;
 }
 
 .bear .markdown table {

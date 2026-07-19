@@ -1,0 +1,29 @@
+name: Update LeetCode Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs everyday at midnight
+  workflow_dispatch: # Allows manual trigger
+  push:
+    branches:
+      - main # Runs on pushes to main
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch LeetCode Stats SVG
+        run: |
+          mkdir -p public/img
+          curl -o public/img/leetcode-stats.svg "https://leetcard.jacoblin.cool/js_99?theme=dark&font=Avenir"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/img/leetcode-stats.svg
+          git diff-index --quiet HEAD || git commit -m "chore: update leetcode stats card"
+          git push

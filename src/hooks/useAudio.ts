@@ -10,6 +10,7 @@ export interface HTMLAudioProps {
 
 export function useAudio(props: HTMLAudioProps) {
   const element = new Audio(props.src);
+  element.preload = "none";
   const ref = useRef<HTMLAudioElement>(element);
 
   const [state, setState] = useState<HTMLAudioState>({

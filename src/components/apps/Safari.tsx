@@ -35,6 +35,7 @@ const NavSection = ({ width, section, setGoURL }: NavSectionProps) => {
             <div className="size-16 mx-auto rounded-md overflow-hidden bg-white">
               {site.img ? (
                 <img
+                  className="size-full object-cover"
                   src={site.img}
                   alt={site.title}
                   title={site.title}

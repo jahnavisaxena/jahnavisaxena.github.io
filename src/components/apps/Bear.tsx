@@ -60,7 +60,7 @@ const Highlighter = (dark: boolean): any => {
 const Sidebar = ({ cur, setMidBar }: SidebarProps) => {
   return (
     <div text-white>
-      <div className="h-12 pr-3 hstack space-x-3 justify-end">
+      <div className="h-12 pr-3 flex items-center space-x-3 justify-end">
         <span className="i-ic:baseline-cloud-off text-xl" />
         <span className="i-akar-icons:settings-vertical text-xl" />
       </div>
@@ -68,7 +68,7 @@ const Sidebar = ({ cur, setMidBar }: SidebarProps) => {
         {bear.map((item, index) => (
           <li
             key={`bear-sidebar-${item.id}`}
-            className={`pl-6 h-8 hstack cursor-default ${
+            className={`pl-6 h-8 flex items-center cursor-default ${
               cur === index ? "bg-red-500" : "bg-transparent"
             } ${cur === index ? "" : "hover:bg-gray-600"}`}
             onClick={() => setMidBar(item.md, index)}
@@ -88,18 +88,16 @@ const Middlebar = ({ items, cur, setContent }: MiddlebarProps) => {
       {items.map((item: BearMdData, index: number) => (
         <li
           key={`bear-midbar-${item.id}`}
-          className={`h-24 flex flex-col cursor-default border-l-2 ${
+          className={`min-h-24 py-3 pl-5 pr-3 flex flex-col cursor-default border-l-2 ${
             cur === index
               ? "border-red-500 bg-white dark:bg-gray-900"
               : "border-transparent bg-transparent"
           } hover:(bg-white dark:bg-gray-900)`}
           onClick={() => setContent(item.id, item.file, index)}
         >
-          <div className="h-8 mt-3 hstack">
-            <div className="-mt-1 w-10 vstack text-c-500">
-              <span className={item.icon} />
-            </div>
-            <span className="relative flex-1 font-bold" text="gray-900 dark:gray-100">
+          <div className="flex items-center gap-3">
+            <span className={`${item.icon} text-lg text-c-500`} />
+            <span className="font-bold text-gray-900 dark:text-gray-100">
               {item.title}
               {item.link && (
                 <a
@@ -113,7 +111,12 @@ const Middlebar = ({ items, cur, setContent }: MiddlebarProps) => {
               )}
             </span>
           </div>
-          <div className="flex-1 ml-10" p="b-2 r-1" text="sm c-500" border="b c-300">
+          <div
+            className="mt-1.5 flex-1 pl-7"
+            p="b-2 r-1"
+            text="sm c-500"
+            border="b c-300"
+          >
             {item.excerpt}
           </div>
         </li>
@@ -172,7 +175,7 @@ const Content = ({ contentID, contentURL }: ContentProps) => {
   }, [contentID, contentURL, fetchMarkdown]);
 
   return (
-    <div className="markdown w-2/3 mx-auto px-2 py-6 text-c-700">
+    <div className="markdown w-11/12 sm:w-2/3 mx-auto px-2 py-6 text-c-700">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[
@@ -188,6 +191,7 @@ const Content = ({ contentID, contentURL }: ContentProps) => {
 };
 
 const Bear = () => {
+  const { winWidth } = useWindowSize();
   const [state, setState] = useState<BearState>({
     curSidebar: 0,
     curMidbar: 0,
@@ -195,6 +199,7 @@ const Bear = () => {
     contentID: bear[0].md[0].id,
     contentURL: bear[0].md[0].file
   });
+  const [showMenu, setShowMenu] = useState(false);
 
   const setMidBar = (items: BearMdData[], index: number) => {
     setState({
@@ -213,22 +218,58 @@ const Bear = () => {
       contentID: id,
       contentURL: url
     });
+    if (winWidth < 600) {
+      setShowMenu(false);
+    }
   };
 
+  const isMobile = winWidth < 600;
+
   return (
-    <div className="bear font-avenir flex h-full">
-      <div className="w-44 overflow-auto bg-gray-700">
-        <Sidebar cur={state.curSidebar} setMidBar={setMidBar} />
+    <div className="bear font-avenir flex h-full relative">
+      {/* Sidebar & Middlebar Container */}
+      <div
+        className={
+          isMobile
+            ? `absolute left-0 top-0 z-20 h-full flex transform transition-transform duration-200 ${
+                showMenu ? "translate-x-0" : "-translate-x-full"
+              }`
+            : "flex h-full"
+        }
+      >
+        <div className="w-44 overflow-auto bg-gray-700">
+          <Sidebar cur={state.curSidebar} setMidBar={setMidBar} />
+        </div>
+        <div className="w-60 overflow-auto" bg="gray-50 dark:gray-800" border="r c-300">
+          <Middlebar
+            items={state.midbarList}
+            cur={state.curMidbar}
+            setContent={setContent}
+          />
+        </div>
       </div>
-      <div className="w-60 overflow-auto" bg="gray-50 dark:gray-800" border="r c-300">
-        <Middlebar
-          items={state.midbarList}
-          cur={state.curMidbar}
-          setContent={setContent}
+
+      {/* Backdrop for Mobile Sidebar */}
+      {isMobile && showMenu && (
+        <div
+          className="absolute inset-0 bg-black/25 z-10"
+          onClick={() => setShowMenu(false)}
         />
-      </div>
-      <div className="flex-1 overflow-auto" bg="gray-50 dark:gray-800">
-        <Content contentID={state.contentID} contentURL={state.contentURL} />
+      )}
+
+      {/* Content Area */}
+      <div className="flex-1 overflow-auto relative" bg="gray-50 dark:gray-800">
+        {isMobile && (
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="absolute top-3 left-3 z-30 p-2 rounded-md bg-c-200 hover:bg-c-300 flex items-center justify-center shadow"
+          >
+            <span className="i-ri:menu-2-line text-lg text-c-800" />
+          </button>
+        )}
+        <div className={isMobile ? "pt-12" : ""}>
+          <Content contentID={state.contentID} contentURL={state.contentURL} />
+        </div>
       </div>
     </div>
   );

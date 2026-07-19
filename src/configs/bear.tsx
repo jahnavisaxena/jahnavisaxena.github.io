@@ -4,28 +4,56 @@ const bear: BearData[] = [
   {
     id: "profile",
     title: "Profile",
-    icon: "i-fa-solid:paw",
+    icon: "i-ri:user-line",
     md: [
       {
         id: "about-me",
         title: "About Me",
         file: "markdown/about-me.md",
-        icon: "i-la:dragon",
-        excerpt: "Hey there! I'm a dragon lost in human world..."
+        icon: "i-ri:user-line",
+        excerpt: "Who I am, my journey, and my passion for cybersecurity..."
       },
       {
-        id: "github-stats",
-        title: "Github Stats",
-        file: "markdown/github-stats.md",
-        icon: "i-icon-park-outline:github",
-        excerpt: "Here are some status about my github account..."
+        id: "education",
+        title: "Education",
+        file: "markdown/education.md",
+        icon: "i-ri:book-open-line",
+        excerpt: "Academic background and education history..."
+      },
+      {
+        id: "experience",
+        title: "Experience",
+        file: "markdown/experience.md",
+        icon: "i-ri:briefcase-line",
+        excerpt: "Professional internships, leadership roles, and volunteer work..."
+      },
+      {
+        id: "skills",
+        title: "Skills",
+        file: "markdown/skills.md",
+        icon: "i-ri:tools-line",
+        excerpt: "My technical skills categorized by domain..."
+      },
+      {
+        id: "achievements",
+        title: "Achievements",
+        file: "markdown/achievements.md",
+        icon: "i-ri:award-line",
+        excerpt: "Hackathons, certifications, and awards..."
+      },
+      {
+        id: "leetcode-stats",
+        title: "LeetCode Stats",
+        file: "markdown/leetcode-stats.md",
+        icon: "i-ri:code-box-line",
+        excerpt: "My LeetCode solving progress and statistics..."
       },
       {
         id: "about-site",
         title: "About This Site",
         file: "markdown/about-site.md",
         icon: "i-octicon:browser",
-        excerpt: "Something about this personal portfolio site..."
+        excerpt: "Technical details of how this portfolio simulator is built..."
       }
     ]
   },
@@ -35,124 +63,38 @@ const bear: BearData[] = [
     icon: "i-octicon:repo",
     md: [
       {
-        id: "flint",
-        title: "Flint",
-        file: "https://raw.githubusercontent.com/Renovamen/flint/main/README.md",
-        icon: "i-heroicons-solid:fire",
-        excerpt: "A deep learning framework implemented in Numpy...",
-        link: "https://github.com/Renovamen/flint"
+        id: "zero-trust-iam",
+        title: "Zero Trust IAM",
+        file: "markdown/projects/zero-trust-iam.md",
+        icon: "i-ri:shield-keyhole-line",
+        excerpt:
+          "Zero Trust identity registry and just-in-time access broker for AI agents.",
+        link: "https://github.com/jahnavisaxena/Zero-Trust-AI-Agent"
       },
       {
-        id: "portfolio-macos",
-        title: "Portfolio macOS",
-        file: "https://raw.githubusercontent.com/Renovamen/playground-macos/main/README.md",
-        icon: "i-ri:gamepad-line",
-        excerpt: "My portfolio website simulating macOS's GUI...",
-        link: "https://github.com/Renovamen/playground-macos"
+        id: "kestrel",
+        title: "Kestrel Scanner",
+        file: "markdown/projects/kestrel.md",
+        icon: "i-ri:scan-2-line",
+        excerpt:
+          "Full-stack AI agent vulnerability scanner integrating SAST and DAST checks.",
+        link: "https://github.com/jahnavisaxena/kestrel-agent-scanner"
       },
       {
-        id: "oh-my-cv",
-        title: "Oh, My CV!",
-        file: "https://raw.githubusercontent.com/Renovamen/oh-my-cv/main/README.md",
-        icon: "i-ri:newspaper-fill",
-        excerpt: "Write your curriculum vitae / resume in Markdown online...",
-        link: "https://ohmycv.app"
+        id: "soc-home-lab",
+        title: "SOC Home Lab",
+        file: "markdown/projects/soc-home-lab.md",
+        icon: "i-ri:terminal-box-line",
+        excerpt: "Self-hosted SOC lab with ELK-based SIEM, Zeek, and Suricata.",
+        link: "https://github.com/jahnavisaxena/SIEM-home-lab-project"
       },
       {
-        id: "oh-vue-icons",
-        title: "Oh, Vue Icons!",
-        file: "https://raw.githubusercontent.com/Renovamen/oh-vue-icons/master/README.md",
-        icon: "i-fa-brands:vuejs",
-        excerpt: "Importing icons from different icon packs in Vue easily...",
-        link: "https://oh-vue-icons.js.org"
-      },
-      {
-        id: "gungnir",
-        title: "Gungnir",
-        file: "https://raw.githubusercontent.com/Renovamen/vuepress-theme-gungnir/main/README.md",
-        icon: "i-akar-icons:sword",
-        excerpt: "A simple and beautiful blog theme for VuePress...",
-        link: "https://vuepress-theme-gungnir.vercel.app"
-      },
-      {
-        id: "metallic",
-        title: "Metallic",
-        file: "https://raw.githubusercontent.com/Renovamen/metallic/master/README.md",
-        icon: "i-icon-park-outline:heavy-metal",
-        excerpt: "A meta-learning library base on PyTorch...",
-        link: "https://github.com/Renovamen/metallic"
-      },
-      {
-        id: "text-classification",
-        title: "Text Classification",
-        file: "https://raw.githubusercontent.com/Renovamen/Text-Classification/master/README.md",
-        icon: "i-gg:format-text",
-        excerpt: "PyTorch implementation of text classificaiton models...",
-        link: "https://github.com/Renovamen/Text-Classification"
-      },
-      {
-        id: "speech-emotion-recognition",
-        title: "Speech Emotion",
-        file: "https://raw.githubusercontent.com/Renovamen/Speech-Emotion-Recognition/master/README.md",
-        icon: "i-ant-design:audio-filled",
-        excerpt: "Speech emotion recognition using Keras and sklearn...",
-        link: "https://github.com/Renovamen/Speech-Emotion-Recognition"
-      },
-      {
-        id: "pcalg-py",
-        title: "PC Algorithm",
-        file: "https://raw.githubusercontent.com/Renovamen/pcalg-py/master/README.md",
-        icon: "i-tabler:atom-2",
-        excerpt: "Implement PC algorithm in Python...",
-        link: "https://github.com/Renovamen/pcalg-py"
-      },
-      {
-        id: "midgard",
-        title: "Midgard",
-        file: "https://raw.githubusercontent.com/Renovamen/midgard/master/README.md",
-        icon: "i-bx:game",
-        excerpt: "An interactive version of my resume, powered by Vue...",
-        link: "https://resume.zxh.io/"
-      },
-      {
-        id: "image-captioning",
-        title: "Image Captioning",
-        file: "https://raw.githubusercontent.com/Renovamen/Image-Captioning/master/README.md",
-        icon: "i-bi:image-fill",
-        excerpt: "PyTorch implementation of image captioning models...",
-        link: "https://github.com/Renovamen/Image-Captioning"
-      },
-      {
-        id: "wordle-helper",
-        title: "Wordle Helper",
-        file: "https://raw.githubusercontent.com/Renovamen/wordle-helper/main/README.md",
-        icon: "i-bi:grid-1x2",
-        excerpt: "Help you solve Wordle puzzles...",
-        link: "https://wordle.zxh.io"
-      },
-      {
-        id: "cube-solver",
-        title: "Cube Solver",
-        file: "https://raw.githubusercontent.com/Renovamen/Just-a-Cube/master/README.md",
-        icon: "i-bx:cube",
-        excerpt: "A rubik's cube solver (layer-by-layer & two-phase)...",
-        link: "https://cube.zxh.io"
-      },
-      {
-        id: "alkaid",
-        title: "Alkaid",
-        file: "https://raw.githubusercontent.com/Renovamen/alkaid/main/README.md",
-        icon: "i-simple-icons:stellar",
-        excerpt: "Minimal reinforcement-learning toolbox for PyTorch...",
-        link: "https://github.com/Renovamen/alkaid"
-      },
-      {
-        id: "fishmail",
-        title: "Fishmail",
-        file: "https://raw.githubusercontent.com/Renovamen/Fishmail/master/README.md",
-        icon: "i-game-icons:fish-escape",
-        excerpt: "上班的时候装作在 Gmail 上查邮件的样子看知乎摸鱼...",
-        link: "https://fishmail.vercel.app"
+        id: "securing-5g",
+        title: "5G Cloud Security",
+        file: "markdown/projects/securing-5g.md",
+        icon: "i-ri:signal-tower-line",
+        excerpt: "Research paper on multi-layered zero-trust security framework in 5G.",
+        link: "https://lnkd.in/gNhMHund"
       }
     ]
   }

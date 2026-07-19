@@ -1,6 +1,7 @@
 {
-  "short_name": "playground-macos",
-  "name": "Xiaohan Zou's Portfolio",
+  "short_name": "Jahnavi's Portfolio",
+  "name": "Jahnavi Saxena's Portfolio",
+  "description": "Jahnavi Saxena's professional portfolio simulating a macOS desktop interface, showcasing expertise in Cybersecurity, Cloud Security, GRC, SOC engineering, and Agentic AI.",
   "icons": [
     {
       "src": "logo/favicon.svg",

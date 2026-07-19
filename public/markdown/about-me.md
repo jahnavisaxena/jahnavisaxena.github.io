@@ -2,31 +2,28 @@
 
 ## Biography
 
-Hey there! I am a PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/). Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor’s degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/).
+Hey there! I am a Computer Science student specializing in **Cybersecurity** (B.Tech Hons) at [UPES](https://www.upes.ac.in/), Dehradun. 
 
-I'm trying to find a balance between research and engineering.
+I am deeply passionate about securing systems, analyzing threat vectors, and building practical defensive security tools. My interest spans across **Blue Team operations, Cloud Security, Security Operation Center (SOC) engineering, GRC (Governance, Risk, and Compliance), and Secure Software Engineering**.
 
-My current research interests primarily focus on understanding and enhancing the continuity, generalizability, efficiency, and other key properties of machine learning. I am also interested in large multimodal models.
+I find a unique intersection between **AI/Agentic Engineering** and **Cybersecurity** — exploring prompt engineering, structured tool-use patterns, and eval/guardrail design to secure agentic workflows and AI agents from modern threats. I have experience building Zero Trust identity registries and vulnerability scanners for agentic ecosystems.
 
-I'm also learning web development and building machine learning software and systems.
+I am an active learner who enjoys participating in hackathons, contributing to technical communities, solving TryHackMe rooms, and conducting security research.
 
+---
 
 ## Contact
 
-Contact me by:
+Feel free to connect with me:
 
-- Email: [renovamenzxh@gmail.com](mailto:renovamenzxh@gmail.com)
-- Github: [@Renovamen](https://github.com/Renovamen)
-- [Google Scholar](https://scholar.google.com/citations?user=RuW6xgMAAAAJ)
-- Linkedin: [xiaohan-zou](https://www.linkedin.com/in/xiaohan-zou)
-- 知乎: [@西伯利亚大恶龙](https://www.zhihu.com/people/chao-neng-gui-su)
-- Personal Website: [zxh.me](https://zxh.me)
+* **Email:** [Jahnavi.119613@stu.upes.ac.in](mailto:Jahnavi.119613@stu.upes.ac.in)
+* **GitHub:** [@jahnavisaxena](https://github.com/jahnavisaxena)
+* **LinkedIn:** [jahnavisaxena](https://www.linkedin.com/in/jahnavi-saxena-1318a6286/)
+* **TryHackMe:** [jahnavisaxena](https://tryhackme.com/p/jahnavisaxena)
 
+---
 
 ## Résumé
 
-- Normal version: [English](https://zxh.me/files/cv/en.pdf) / [中文](https://zxh.me/files/cv/cn.pdf)
-
-  中文版的更新很可能不及时
-
-- Interesting version: [portfolio.zxh.me](https://portfolio.zxh.me) / [resume.zxh.io](https://resume.zxh.io)
+* **Normal version:** [Download PDF](/files/cv/Jahnavi_Saxena_Resume.pdf)
+* **Interactive version:** You are currently exploring my interactive macOS portfolio simulator! Feel free to open the **Terminal**, check out the **VSCode** editor, or browse my bookmarks in **Safari**.
